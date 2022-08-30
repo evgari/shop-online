@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopOnline</title>
+
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo header__logo">
+        <img class="logo__img" src="img/logo.svg" alt="лого">
+      </a>
+
+      <button class="header__btn btn-reset">
+        <svg class="header__btn-icon" width="18" height="12" viewbox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 12H6V10H0V12ZM0 0V2H18V0H0ZM0 7H12V5H0V7Z" fill="white"/>
+        </svg>
+        Меню
+      </button>
+
+      <form class="header__form search-form">
+        <input class="search-form__input" type="search" placeholder="Я ищу...">
+        <button class="search-form__btn btn-reset" type="submit" aria-label="кнопка поиска">
+          <svg class="search-form__btn-icon" viewbox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.25 17H18.065L17.645 16.595C19.115 14.885 20 12.665 20 10.25C20 4.865 15.635 0.5 10.25 0.5C4.865 0.5 0.5 4.865 0.5 10.25C0.5 15.635 4.865 20 10.25 20C12.665 20 14.885 19.115 16.595 17.645L17 18.065V19.25L24.5 26.735L26.735 24.5L19.25 17ZM10.25 17C6.515 17 3.5 13.985 3.5 10.25C3.5 6.515 6.515 3.5 10.25 3.5C13.985 3.5 17 6.515 17 10.25C17 13.985 13.985 17 10.25 17Z" fill="white"/>
+          </svg>
+        </button>
+      </form>
+
+      <ul class="user-menu list-reset">
+        <li class="user-menu__item">
+          <button class="user-menu__btn btn-reset">
+            <svg class="person-icon" width="24" height="24" viewbox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C15.315 12 18 9.315 18 6C18 2.685 15.315 0 12 0C8.685 0 6 2.685 6 6C6 9.315 8.685 12 12 12ZM12 15C7.995 15 0 17.01 0 21V24H24V21C24 17.01 16.005 15 12 15Z" />
+            </svg>
+            <span class="user-menu__text">Профиль</span>  
+          </button>
+        </li>
+        <li class="user-menu__item">
+          <button class="user-menu__btn cart btn-reset">
+            <svg class="cart-icon" width="31" height="30" viewbox="0 0 31 30" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 24C7.85 24 6.515 25.35 6.515 27C6.515 28.65 7.85 30 9.5 30C11.15 30 12.5 28.65 12.5 27C12.5 25.35 11.15 24 9.5 24ZM0.5 0V3H3.5L8.9 14.385L6.875 18.06C6.635 18.48 6.5 18.975 6.5 19.5C6.5 21.15 7.85 22.5 9.5 22.5H27.5V19.5H10.13C9.92 19.5 9.755 19.335 9.755 19.125L9.8 18.945L11.15 16.5H22.325C23.45 16.5 24.44 15.885 24.95 14.955L30.32 5.22C30.44 5.01 30.5 4.755 30.5 4.5C30.5 3.675 29.825 3 29 3H6.815L5.405 0H0.5ZM24.5 24C22.85 24 21.515 25.35 21.515 27C21.515 28.65 22.85 30 24.5 30C26.15 30 27.5 28.65 27.5 27C27.5 25.35 26.15 24 24.5 24Z" />
+            </svg>
+            <span class="user-menu__text">Корзина</span> 
+            <span class="cart__count">2</span>
+          </button>
+        </li>
+        <li class="user-menu__item">
+          <button class="user-menu__btn btn-reset">
+            <svg class="favorite-icon" width="30" height="29" viewbox="0 0 30 29" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 28.025L12.825 26.045C5.1 19.04 0 14.42 0 8.75C0 4.13 3.63 0.5 8.25 0.5C10.86 0.5 13.365 1.715 15 3.635C16.635 1.715 19.14 0.5 21.75 0.5C26.37 0.5 30 4.13 30 8.75C30 14.42 24.9 19.04 17.175 26.06L15 28.025Z" />
+            </svg>
+            <span class="user-menu__text">Избранное</span>  
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="banner">
+    <div class="container">
+      <div class="banner__content">
+        <p class="banner__promotion">-50% на все ноутбуки</p>
+        <div class="banner__timer timer">
+          До конца акции:
+          <ul class="timer__list list-reset">
+            <li class="timer__item">
+              <span class="banner__item-count">3</span>
+              дня
+            </li>
+            <li class="timer__item">
+              <span class="banner__item-count">8</span>
+              часов
+            </li>
+            <li class="timer__item">
+              <span class="banner__item-count">43</span>
+              минуты
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="promo">
+    <div class="container">
+      <ul class="promo__list list-reset">
+        <li class="promo__item grid-item-1" style="background-image: url('img/promo-1.jpg');">
+          <p class="promo__content promo__content_s">Книга – 
+          <span>лучший подарок</span></p>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-2" style="background-image: url('img/promo-2.jpg');">
+          <p class="promo__content promo__content_s">Время скидок!</p>
+          <span class="promo__sale">-25%</span>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-3" style="background-image: url('img/promo-3.jpg');">
+          <p class="promo__content promo__content_blue">Вторая пара кроссовок <span>в подарок!</span></p>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-4" style="background-image: url('img/promo-4.jpg');">
+          <p class="promo__content promo__content_m">
+            Идеи новогодних
+            подарков
+          </p>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-5" style="background-image: url('img/promo-5.jpg');">
+          <span class="promo__sale">-40%</span>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-6" style="background-image: url('img/promo-6.jpg');">
+          <div class="grid-item-6__inner">
+            <p class="promo__content promo__content_m">Выгодно в декабре!</p>
+            <span class="promo__sale">-15%</span>
+            <a class="promo__link" href="#"></a>
+          </div>
+        </li>
+        <li class="promo__item grid-item-7 promo__item_mt" style="background-image: url('img/promo-7.jpg');">
+          <p class="promo__content promo__content_white">Новогодние украшения</p>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-8" style="background-image: url('img/promo-8.jpg');">
+          <span class="promo__sale">-55%</span>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-9" style="background-image: url('img/promo-9.jpg');">
+          <span class="promo__sale">-25%</span>
+          <p class="promo__content promo__content_s promo__content_xs">На бытовую химию</p>
+          <a class="promo__link" href="#"></a>
+        </li>
+        <li class="promo__item grid-item-10" style="background-image: url('img/promo-10.jpg');">
+          <a class="promo__link" href="#"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

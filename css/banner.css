@@ -1,0 +1,156 @@
+.banner {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.banner__content {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 145px 112px 40px;
+  min-height: 480px;
+  background-image: url('../img/banner.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__promotion {
+  align-self: flex-start;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 91px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.timer__list {
+  display: flex;
+  gap: 30px;
+}
+
+.timer__item {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.banner__item-count {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .banner__content {
+    padding: 80px 80px 36px;
+    min-height: 314px;
+  }
+
+  .banner__promotion {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .timer__list {
+    gap: 20px;
+  }
+  
+  .timer__item {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .banner__item-count {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .banner__content {
+    padding: 64px 80px 30px;
+    min-height: 280px;
+  }
+
+  .banner__promotion {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .timer {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .timer__list {
+    gap: 10px;
+  }
+  
+  .timer__item {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  
+  .banner__item-count {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .banner__content {
+    padding: 50px 29px 30px;
+    min-height: 340px;
+    background-image: url('../img/banner-mobile.jpg');
+  }
+
+  .banner__promotion {
+    align-self: auto;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  .timer {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .timer__list {
+    gap: 8px;
+  }
+  
+  .timer__item {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .banner__item-count {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
