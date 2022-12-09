@@ -9,6 +9,8 @@
   <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+
+  <script defer src="js/timer.js"></script>
 </head>
 <body>
   <header class="header">
@@ -67,23 +69,7 @@
     <div class="container">
       <div class="banner__content">
         <p class="banner__promotion">-50% на все ноутбуки</p>
-        <div class="banner__timer timer">
-          До конца акции:
-          <ul class="timer__list list-reset">
-            <li class="timer__item">
-              <span class="banner__item-count">3</span>
-              дня
-            </li>
-            <li class="timer__item">
-              <span class="banner__item-count">8</span>
-              часов
-            </li>
-            <li class="timer__item">
-              <span class="banner__item-count">43</span>
-              минуты
-            </li>
-          </ul>
-        </div>
+        <div class="banner__timer timer" data-timer-deadline="2023/01/01 00:00"></div>
       </div>
     </div>
   </div>

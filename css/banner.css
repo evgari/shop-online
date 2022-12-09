@@ -24,24 +24,26 @@
 }
 
 .timer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+
+}
+
+.timer__title {
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
-}
-
-.timer__list {
-  display: flex;
-  gap: 30px;
+  text-align: center;
 }
 
 .timer__item {
+  display: inline-block;
   font-size: 32px;
   font-weight: 700;
   line-height: 42px;
+}
+
+.timer__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .banner__item-count {
