@@ -2,6 +2,7 @@
 
 const timerField = document.querySelector('[data-timer-deadline]');
 const deadline = timerField.dataset.timerDeadline;
+console.log(deadline);
 
 const createTimer = () => {
   const timerHTML = `

@@ -7,12 +7,20 @@ const addText = () => {
   par.textContent = input.value;
 };
 
-input.addEventListener('change', () => {
-  setTimeout(addText, 3000);
+const f = debounce(addText, 300);
+
+input.addEventListener('input', () => {
+  f();
 });
 
-
-
-
+function debounce(callback, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      callback.apply(this, args);  
+    }, delay);
+  }
+};
 
 
