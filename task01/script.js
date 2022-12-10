@@ -7,11 +7,9 @@ const addText = () => {
   par.textContent = input.value;
 };
 
-const f = debounce(addText, 300);
+const fn = debounce(addText, 300);
 
-input.addEventListener('input', () => {
-  f();
-});
+input.addEventListener('input', fn);
 
 function debounce(callback, delay) {
   let timer;
