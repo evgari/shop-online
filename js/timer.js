@@ -62,16 +62,21 @@ const timer = deadline => {
        2 : cases[(number % 10 < 5) ? number % 10 : 5]];
   };
 
+  const formatNum = param => {
+    if (param < 10) {
+      return '0' + param;
+    } else {
+      return param;
+    }
+  };
+
   const start = () => {
     const {timeRemainig, seconds, minutes, hours, days} = getTimeRemaining();
 
     timerCountDays.textContent = days;
-    timerCountHours.textContent = hours < 10 ?
-     '0' + hours : hours;
-    timerCountMinutes.textContent = minutes < 10 ?
-     '0' + minutes : minutes;
-    timerCountSeconds.textContent = seconds < 10 ?
-     '0' + seconds : seconds;
+    timerCountHours.textContent = formatNum(hours);
+    timerCountMinutes.textContent = formatNum(minutes);
+    timerCountSeconds.textContent = formatNum(seconds);
 
     timerTextDays.textContent = declOfNum(days,
         ['день', 'дня', 'дней']);
