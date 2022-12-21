@@ -65,6 +65,13 @@ fieldset {
   margin: 0 auto;
 }
 
+.gray-font {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #8f8f8f;
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 20px;

@@ -1,7 +1,4 @@
-'use strict';
-
 const timerField = document.querySelector('[data-timer-deadline]');
-const deadline = timerField.dataset.timerDeadline;
 
 const createTimer = () => {
   const timerHTML = `
@@ -103,6 +100,8 @@ const timer = deadline => {
 };
 
 if (timerField) {
+  const deadline = timerField.dataset.timerDeadline;
+
   createTimer();
   timer(deadline);
 }
