@@ -96,7 +96,7 @@ const init = async () => {
   const {pagination} = await getPostsData();
 
   if (postNav) {
-    startPagination(postNav, pagination.pages, pagination.page, 5);
+    startPagination(postNav, pagination.pages, pagination.page, 3);
     createPostsList();
   }
 
