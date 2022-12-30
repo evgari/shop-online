@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog-single</title>
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="module" src="js/modules/blog.js"></script>
+</head>
+<body>
+  <svg display="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="eye" viewbox="0 0 22 17" fill="none" stroke="currentColor">
+      <path d="M20.257 7.462C20.731 8.082 20.731 8.919 20.257 9.538C18.764 11.487 15.182 15.5 11 15.5C6.81801 15.5 3.23601 11.487 1.74301 9.538C1.51239 9.24113 1.38721 8.87592 1.38721 8.5C1.38721 8.12408 1.51239 7.75887 1.74301 7.462C3.23601 5.513 6.81801 1.5 11 1.5C15.182 1.5 18.764 5.513 20.257 7.462V7.462Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 11.5C12.6569 11.5 14 10.1569 14 8.5C14 6.84315 12.6569 5.5 11 5.5C9.34315 5.5 8 6.84315 8 8.5C8 10.1569 9.34315 11.5 11 11.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="comment" viewbox="0 0 20 20" fill="currentColor">
+      <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM4 7H16V9H4V7ZM12 12H4V10H12V12ZM16 6H4V4H16V6Z"/>
+    </symbol>
+
+    <symbol id="arrow" viewbox="0 0 29 19" fill="currentColor">
+      <path d="M28.375 7.95833H6.52958L12.0487 2.42375L9.875 0.25L0.625 9.5L9.875 18.75L12.0487 16.5763L6.52958 11.0417H28.375V7.95833Z"/>
+    </symbol>
+  </svg>
+
+  <div class="blog-single">
+    <div class="container">
+      <nav class="breadcrumbs blog-single__breadcrumbs">
+        <ul class="list-reset breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Блог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Как ухаживать за обувью из кожи</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="blog-single__wrapper">
+        <div class="blog-single__left">
+          <div class="blog-single__content">
+            <div class="blog-single__title">Как ухаживать за обувью из кожи</div>
+            <p class="blog-single__text">
+              Материала для обуви лучше натуральной кожи все ещё не придумали. Качественную кожу очень приятно носить, она идеально ложится по ноге, в нужных местах немного растягивается. В кожаной обуви, если она соответствует погоде, создаётся хороший микроклимат – ноги не мёрзнут, не потеют, и чувствуют себя очень комфортно. Неудивительно, что по статистике больше 60% покупателей выбирает обувь именно из гладкой натуральной кожи. Вдобавок кожа практична и не требует трудоёмкого ухода.
+              Но это совсем не означает, что можно раз в полгода протереть обувь тряпочкой и на этом остановиться. Так же, как кожа лица и тела, материал обуви нуждается в заботе. Регулярный уход надолго продлит срок службы любимой пары и сделает её аккуратной и сияющей, словно только что из магазина.
+            </p>
+          </div>
+          <div class="blog-single__inner">
+            <a href="blog.html" class="blog-single__link">
+              <svg class="back-icon">
+                <use href="#arrow"></use>
+              </svg>
+              К списку статей
+            </a>
+            <div class="post-info">
+              <p class="post-info__author">Инга Соловьева</p>
+              <div class="post-info__date info-text">
+                22 октября 2021, 12:45
+              </div>
+              <div class="post-info__props">
+                <span class="info-text post-info__prop">
+                  <svg class="info-icon">
+                    <use href="#eye"></use>
+                  </svg>
+                  1.2K
+                </span>
+                <span class="info-text post-info__prop">
+                  <svg class="info-icon">
+                    <use href="#comment"></use>
+                  </svg>
+                  0
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-single__right">
+          <div class="sidebar">
+            <img class="sidebar__image" src="img/banner-1.jpg" alt="">
+            <img class="sidebar__image" src="img/banner-2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

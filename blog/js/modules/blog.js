@@ -1,3 +1,5 @@
+import {startPagination} from './pagination.js';
+
 const getPostsData = async () => {
   const pageParams = new URLSearchParams(location.search);
   const postPage = pageParams.get('page');
@@ -12,25 +14,6 @@ const getPostsData = async () => {
   };
 };
 
-const createPostsNav = async () => {
-  const {pagination} = await getPostsData();
-  const postsNav = document.querySelector('.pagination__list');
-  let postNav = '';
-
-  for (let i = 1; i <= pagination.pages; i++) {
-    const pageUrl = i === 1 ? 'blog.html' :
-      `blog.html?page=${i}`;
-
-    postNav += `
-      <li class="pagination__item">
-        <a href="${pageUrl}" class="pagination__link">${i}</a>
-      </li>
-    `;
-
-    postsNav.innerHTML = postNav;
-  }
-};
-
 const createPostsList = async () => {
   const {posts} = await getPostsData();
   const postsList = document.querySelector('.posts-list');
@@ -41,27 +24,26 @@ const createPostsList = async () => {
       <li class="posts-list__item">
         <article class="post">
           <div class="post__image">
-            <img src="img/blogs/image-${Math
-      .ceil(Math.random() * 12)}.png" alt="">
+            <img src="img/image-1.png" alt="">
           </div>
-          <div class="post__content">
-            <h3 class="post__title">${posts[i].title}</h3>
-            <div class="post__date gray-font">
-              19 октября 2021, 10:23
+          <div class="post__content post-info">
+            <h3 class="post-info__title">${posts[i].title}</h3>
+            <div class="post-info__date info-text">
+              22 октября 2021, 12:45
             </div>
-            <div class="post__info">
-              <div class="post__views gray-font">
-                <svg class="eye-icon">
+            <div class="post-info__props">
+              <span class="info-text post-info__prop">
+                <svg class="info-icon">
                   <use href="#eye"></use>
                 </svg>
-                <span>3,6K</span>
-              </div>
-              <div class="post__comments gray-font">
-                <svg class="comment-icon">
+                1.2K
+              </span>
+              <span class="info-text post-info__prop">
+                <svg class="info-icon">
                   <use href="#comment"></use>
                 </svg>
-                <span>0</span>
-              </div>
+                0
+              </span>
             </div>
           </div>
           <a href="blog-single.html?id=${posts[i].id}" class="post__link"></a>
@@ -74,8 +56,9 @@ const createPostsList = async () => {
 };
 
 const createPostPage = async () => {
-  const postPage = document.querySelector('.post-content');
-  const postPageNav = document.querySelector('.breadcrumbs__link:last-child');
+  const postPage = document.querySelector('.blog-single__content');
+  const postPageNav = document
+      .querySelector('.breadcrumbs__item:last-child .breadcrumbs__link');
   let postContent = '';
 
   const pageParams = new URLSearchParams(location.search);
@@ -86,8 +69,8 @@ const createPostPage = async () => {
   const post = result.data;
 
   postContent = `
-    <h2 class="post-content__title">${post.title}</h2>  
-    <p class="post-content__text">${post.body}</p>
+    <h2 class="blog-single__title">${post.title}</h2>  
+    <p class="blog-single__text">${post.body}</p>
   `;
 
   postPageNav.textContent = post.title;
@@ -95,7 +78,7 @@ const createPostPage = async () => {
 };
 
 const createPostInfo = async () => {
-  const autorBlock = document.querySelector('.post__autor');
+  const autorBlock = document.querySelector('.post-info__author');
 
   const pageParams = new URLSearchParams(location.search);
   const postId = pageParams.get('id');
@@ -108,11 +91,12 @@ const createPostInfo = async () => {
 };
 
 const init = async () => {
-  const postNav = document.querySelector('.pagination__list');
-  const postPage = document.querySelector('.blog-single-container__post');
+  const postNav = document.querySelector('.pagination');
+  const postPage = document.querySelector('.blog-single');
+  const {pagination} = await getPostsData();
 
   if (postNav) {
-    createPostsNav();
+    startPagination(postNav, pagination.pages, pagination.page, 5);
     createPostsList();
   }
 
@@ -123,3 +107,4 @@ const init = async () => {
 };
 
 init();
+
